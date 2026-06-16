@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Looking App — 启动页布局
+  用法：放入 res/layout/activity_splash_looking.xml
+  在 SplashActivity 中 setContentView(R.layout.activity_splash_looking)
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash_gradient">
+
+    <!-- ═══════════════════════════════════════
+         背景装饰层
+    ═══════════════════════════════════════ -->
+
+    <!-- 右上角光晕球 -->
+    <View
+        android:layout_width="360dp"
+        android:layout_height="360dp"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="-100dp"
+        android:layout_marginEnd="-100dp"
+        android:background="@drawable/bg_glow_circle_purple"
+        android:alpha="0.22"/>
+
+    <!-- 左下角光晕球 -->
+    <View
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:layout_gravity="bottom|start"
+        android:layout_marginBottom="-80dp"
+        android:layout_marginStart="-80dp"
+        android:background="@drawable/bg_glow_circle_dark"
+        android:alpha="0.28"/>
+
+    <!-- 装饰弧线（大圆） -->
+    <View
+        android:layout_width="520dp"
+        android:layout_height="520dp"
+        android:layout_gravity="top|start"
+        android:layout_marginTop="-140dp"
+        android:layout_marginStart="-80dp"
+        android:background="@drawable/bg_arc_ring"
+        android:alpha="0.08"/>
+
+    <!-- ═══════════════════════════════════════
+         主内容区（垂直居中，整体稍偏上）
+    ═══════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="80dp"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- 图标 + 光晕叠加 -->
+        <FrameLayout
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_marginBottom="36dp">
+
+            <!-- 光晕层（发光效果） -->
+            <View
+                android:id="@+id/v_glow"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_icon_glow"/>
+
+            <!-- 图标主体 -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/iv_logo"
+                android:layout_width="108dp"
+                android:layout_height="108dp"
+                android:layout_gravity="center"
+                app:cardCornerRadius="26dp"
+                app:cardElevation="20dp"
+                app:cardBackgroundColor="#5046C8">
+
+                <!-- 图标内容（放大镜矢量） -->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_launcher_foreground"
+                    android:scaleType="fitCenter"
+                    android:padding="4dp"/>
+
+            </androidx.cardview.widget.CardView>
+
+        </FrameLayout>
+
+        <!-- 品牌名：Looking -->
+        <TextView
+            android:id="@+id/tv_brand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Looking"
+            android:textSize="52sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:letterSpacing="0.06"
+            android:fontFamily="sans-serif-black"/>
+
+        <!-- 主 Slogan -->
+        <TextView
+            android:id="@+id/tv_slogan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Looking for the life you love"
+            android:textSize="13sp"
+            android:textColor="#99FFFFFF"
+            android:letterSpacing="0.12"
+            android:textAllCaps="false"/>
+
+        <!-- 中文副 Slogan -->
+        <TextView
+            android:id="@+id/tv_sub_slogan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="见所未见 · 见你所爱"
+            android:textSize="13sp"
+            android:textColor="#66FFFFFF"
+            android:letterSpacing="0.08"/>
+
+        <!-- 分割线 -->
+        <View
+            android:id="@+id/v_divider"
+            android:layout_width="48dp"
+            android:layout_height="1.5dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/bg_divider_white"/>
+
+        <!-- 三点指示器 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- 激活点（宽） -->
+            <View
+                android:id="@+id/dot1"
+                android:layout_width="20dp"
+                android:layout_height="6dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/bg_dot_active"/>
+
+            <!-- 普通点 -->
+            <View
+                android:id="@+id/dot2"
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/bg_dot_normal"/>
+
+            <View
+                android:id="@+id/dot3"
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:background="@drawable/bg_dot_normal"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- ═══════════════════════════════════════
+         底部区域：加载条 + 版权
+    ═══════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingBottom="52dp">
+
+        <!-- 加载进度条 -->
+        <View
+            android:id="@+id/loading_bar"
+            android:layout_width="100dp"
+            android:layout_height="2dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_loading_bar"/>
+
+        <!-- 版权信息 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="© 2025 Looking · 探索你所热爱的生活"
+            android:textSize="11sp"
+            android:textColor="#40FFFFFF"
+            android:letterSpacing="0.05"/>
+
+    </LinearLayout>
+
+    <!-- ═══════════════════════════════════════
+         右上角 Beta 标签
+    ═══════════════════════════════════════ -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="20dp"
+        android:text="Beta"
+        android:textSize="10sp"
+        android:textColor="#AAFFFFFF"
+        android:letterSpacing="0.15"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:background="@drawable/bg_badge_glass"/>
+
+</FrameLayout>

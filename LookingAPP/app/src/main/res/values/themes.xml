@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.XHSApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary_purple</item>
+        <item name="colorPrimaryVariant">@color/primary_purple_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/accent_pink</item>
+        <item name="android:windowBackground">@color/bg_main</item>
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="Theme.XHSApp.Splash" parent="Theme.XHSApp">
+        <item name="android:windowBackground">@drawable/start</item>
+        <item name="android:statusBarColor">@color/primary_purple</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <!-- EditText 样式 -->
+    <style name="InputStyle">
+        <item name="android:background">@drawable/bg_input_field</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingTop">14dp</item>
+        <item name="android:paddingBottom">14dp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textColorHint">@color/text_hint</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <!-- 紫色按钮 -->
+    <style name="BtnPrimary">
+        <item name="android:background">@drawable/bg_btn_primary</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingTop">14dp</item>
+        <item name="android:paddingBottom">14dp</item>
+    </style>
+
+    <!-- 白色描边按钮（用于深色背景上） -->
+    <style name="BtnOutlineWhite" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">@color/primary_purple</item>
+        <item name="android:background">@drawable/bg_btn_outline_white</item>
+    </style>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Looking</string>
+    <string name="nav_home">推荐</string>
+    <string name="nav_category">分类</string>
+    <string name="nav_message">消息</string>
+    <string name="nav_profile">我的</string>
+</resources>

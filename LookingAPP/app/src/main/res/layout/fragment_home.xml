@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_main">
+
+    <!-- 顶部栏 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:background="@color/bg_card"
+        android:orientation="horizontal">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:tabGravity="start"
+            app:tabMode="fixed"
+            app:tabIndicatorColor="@color/primary_purple"
+            app:tabIndicatorHeight="3dp"
+            app:tabSelectedTextColor="@color/text_primary"
+            app:tabTextColor="@color/text_secondary"
+            app:tabTextAppearance="@style/TabTextAppearance"
+            app:tabPaddingStart="0dp"
+            app:tabPaddingEnd="16dp" />
+
+        <ImageView
+            android:id="@+id/iv_ai"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_ai"
+            android:layout_marginEnd="12dp" />
+
+        <ImageView
+            android:id="@+id/iv_notice"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_bell"
+            android:tint="@color/text_primary" />
+    </LinearLayout>
+
+    <!-- 搜索栏 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:background="@color/bg_card"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_search"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_search_bar"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:drawableLeft="@drawable/ic_search"
+            android:drawablePadding="8dp"
+            android:drawableTint="@color/text_hint"
+            android:text="搜索你感兴趣的内容"
+            android:textColor="@color/text_hint"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="56dp"
+            android:layout_height="36dp"
+            android:gravity="center"
+            android:background="@drawable/bg_btn_primary"
+            android:text="搜索"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Banner -->
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/banner_height"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp">
+
+                    <androidx.viewpager2.widget.ViewPager2
+                        android:id="@+id/vp_banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </FrameLayout>
+
+                <!-- 功能入口 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="8dp"
+                    android:background="@color/bg_card"
+                    android:layout_marginTop="8dp">
+
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:gravity="center" android:orientation="vertical"
+                        android:clickable="true" android:focusable="true" android:tag="hot">
+                        <ImageView android:layout_width="48dp" android:layout_height="48dp"
+                            android:src="@drawable/ic_hot" android:background="@drawable/bg_icon_hot"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="热门" android:textSize="12sp" android:textColor="@color/text_secondary"
+                            android:layout_marginTop="6dp"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:gravity="center" android:orientation="vertical"
+                        android:clickable="true" android:focusable="true" android:tag="category">
+                        <ImageView android:layout_width="48dp" android:layout_height="48dp"
+                            android:src="@drawable/ic_nav_category" android:background="@drawable/bg_icon_category"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="分类" android:textSize="12sp" android:textColor="@color/text_secondary"
+                            android:layout_marginTop="6dp"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:gravity="center" android:orientation="vertical"
+                        android:clickable="true" android:focusable="true" android:tag="discover">
+                        <ImageView android:layout_width="48dp" android:layout_height="48dp"
+                            android:src="@drawable/ic_discover" android:background="@drawable/bg_icon_discover"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="发现" android:textSize="12sp" android:textColor="@color/text_secondary"
+                            android:layout_marginTop="6dp"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:gravity="center" android:orientation="vertical"
+                        android:clickable="true" android:focusable="true" android:tag="video">
+                        <ImageView android:layout_width="48dp" android:layout_height="48dp"
+                            android:src="@drawable/ic_video" android:background="@drawable/bg_icon_video"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="视频" android:textSize="12sp" android:textColor="@color/text_secondary"
+                            android:layout_marginTop="6dp"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:gravity="center" android:orientation="vertical"
+                        android:clickable="true" android:focusable="true" android:tag="read">
+                        <ImageView android:layout_width="48dp" android:layout_height="48dp"
+                            android:src="@drawable/ic_read" android:background="@drawable/bg_icon_read"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="阅读" android:textSize="12sp" android:textColor="@color/text_secondary"
+                            android:layout_marginTop="6dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 为你推荐标题 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="为你推荐"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary" />
+
+                    <ImageView
+                        android:id="@+id/iv_refresh"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/ic_refresh"
+                        android:tint="@color/text_secondary" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" 换一换"
+                        android:textSize="13sp"
+                        android:textColor="@color/text_secondary" />
+                </LinearLayout>
+
+                <!-- 瀑布流 RecyclerView -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_posts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:nestedScrollingEnabled="false"
+                    android:clipToPadding="false" />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</LinearLayout>

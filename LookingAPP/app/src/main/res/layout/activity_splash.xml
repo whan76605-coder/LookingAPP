@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/start">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Looking"
+        android:textSize="44sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:letterSpacing="0.18" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Keep Looking. Keep Living."
+        android:textSize="14sp"
+        android:textColor="#B0BEC5"
+        android:letterSpacing="0.05" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="—— 生活的探索者 ——"
+        android:textSize="13sp"
+        android:textColor="#78909C" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Looking: 见所未见，见你所爱"
+        android:textSize="12sp"
+        android:textColor="#546E7A" />
+
+</LinearLayout>

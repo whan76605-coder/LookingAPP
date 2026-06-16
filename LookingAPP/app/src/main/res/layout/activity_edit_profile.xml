@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_main">
+
+    <!-- 标题栏 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="4dp"
+        android:paddingRight="16dp"
+        android:background="@color/bg_card"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:padding="10dp"
+            android:src="@drawable/ic_back"
+            android:tint="@color/text_primary" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="编辑资料"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary" />
+
+        <TextView
+            android:id="@+id/tv_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="保存"
+            android:textSize="15sp"
+            android:textColor="@color/primary_purple"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- 头像 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:background="@color/bg_card"
+        android:layout_marginTop="8dp">
+
+        <FrameLayout
+            android:layout_width="72dp"
+            android:layout_height="72dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_avatar"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:src="@drawable/ic_default_avatar" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:layout_gravity="bottom"
+                android:gravity="center"
+                android:background="#80000000"
+                android:text="更换"
+                android:textSize="11sp"
+                android:textColor="@color/white" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- 昵称 -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="56dp"
+        android:orientation="horizontal" android:gravity="center_vertical"
+        android:paddingLeft="16dp" android:paddingRight="16dp"
+        android:background="@color/bg_card" android:layout_marginTop="8dp">
+        <TextView android:layout_width="70dp" android:layout_height="wrap_content"
+            android:text="昵称" android:textSize="15sp" android:textColor="@color/text_primary"/>
+        <EditText android:id="@+id/et_nickname"
+            android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+            android:background="@color/bg_card" android:textSize="15sp"
+            android:textColor="@color/text_primary" android:textColorHint="@color/text_hint"
+            android:hint="请输入昵称" android:gravity="end" android:maxLines="1"/>
+    </LinearLayout>
+
+    <View android:layout_width="match_parent" android:layout_height="1dp"
+        android:background="@color/divider" android:layout_marginLeft="16dp"/>
+
+    <!-- 个人简介 -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:gravity="top"
+        android:paddingLeft="16dp" android:paddingRight="16dp" android:paddingTop="14dp"
+        android:paddingBottom="14dp" android:background="@color/bg_card">
+        <TextView android:layout_width="70dp" android:layout_height="wrap_content"
+            android:text="简介" android:textSize="15sp" android:textColor="@color/text_primary"/>
+        <EditText android:id="@+id/et_bio"
+            android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+            android:background="@color/bg_card" android:textSize="15sp"
+            android:textColor="@color/text_primary" android:textColorHint="@color/text_hint"
+            android:hint="介绍一下自己吧" android:gravity="end|top"
+            android:inputType="textMultiLine" android:maxLines="3" android:minLines="2"/>
+    </LinearLayout>
+
+</LinearLayout>

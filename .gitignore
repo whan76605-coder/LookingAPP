@@ -1,0 +1,12 @@
+# Android
+.gradle/
+build/
+app/build/
+
+# Maven/Java
+target/
+.idea/
+*.iml
+.mvn/
+mvnw
+mvnw.cmd

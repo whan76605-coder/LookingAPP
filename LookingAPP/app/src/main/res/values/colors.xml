@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_purple">#6C63FF</color>
+    <color name="primary_purple_light">#EEF0FF</color>
+    <color name="primary_purple_dark">#4A42CC</color>
+    <color name="accent_pink">#FF4B7B</color>
+    <color name="bg_main">#F5F6FA</color>
+    <color name="bg_card">#FFFFFF</color>
+    <color name="bg_input">#F0F1F5</color>
+    <color name="text_primary">#1A1A2E</color>
+    <color name="text_secondary">#7A7A8A</color>
+    <color name="text_hint">#BBBBC8</color>
+    <color name="divider">#EBEBF0</color>
+    <color name="like_red">#FF4B4B</color>
+    <color name="collect_gold">#FFB800</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="overlay">#80000000</color>
+    <color name="badge_red">#FF3B30</color>
+    <color name="rank_gold">#FFB800</color>
+    <color name="rank_silver">#9E9E9E</color>
+    <color name="rank_bronze">#CD7F32</color>
+
+    <!-- 夜间模式 -->
+    <color name="night_bg">#121212</color>
+    <color name="night_card">#1E1E1E</color>
+    <color name="night_surface">#2D2D2D</color>
+    <color name="night_text">#E0E0E0</color>
+    <color name="night_text_secondary">#9E9E9E</color>
+    <color name="night_divider">#333333</color>
+</resources>

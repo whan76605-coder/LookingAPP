@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Looking App — 自适应图标背景层
+  用法：放入 res/drawable/ic_launcher_background.xml
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- 主背景：深紫渐变 -->
+    <path
+        android:pathData="M0,0 H108 V108 H0 Z"
+        android:fillColor="#2D1B8E"/>
+
+    <!-- 右上光晕 -->
+    <path
+        android:pathData="M108,0 A75,75 0,0,1 33,75 L108,108 Z"
+        android:fillColor="#6C63FF"
+        android:fillAlpha="0.30"/>
+
+    <!-- 左下光晕 -->
+    <path
+        android:pathData="M0,108 A65,65 0,0,1 65,43 L0,0 Z"
+        android:fillColor="#4A3FCC"
+        android:fillAlpha="0.28"/>
+
+    <!-- 中央微弱紫光 -->
+    <path
+        android:pathData="M6.0,54.0 A48.0,48.0 0 1,0 102.0,54.0 A48.0,48.0 0 1,0 6.0,54.0 Z"
+        android:fillColor="#5046C8"
+        android:fillAlpha="0.14"/>
+
+</vector>

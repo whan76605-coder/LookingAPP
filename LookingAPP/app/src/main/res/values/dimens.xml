@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="radius_small">8dp</dimen>
+    <dimen name="radius_medium">12dp</dimen>
+    <dimen name="radius_large">16dp</dimen>
+    <dimen name="radius_xlarge">24dp</dimen>
+    <dimen name="card_elevation">2dp</dimen>
+    <dimen name="bottom_nav_height">60dp</dimen>
+    <dimen name="header_height">56dp</dimen>
+    <dimen name="avatar_small">32dp</dimen>
+    <dimen name="avatar_medium">44dp</dimen>
+    <dimen name="avatar_large">72dp</dimen>
+    <dimen name="banner_height">180dp</dimen>
+    <dimen name="post_image_height">200dp</dimen>
+</resources>

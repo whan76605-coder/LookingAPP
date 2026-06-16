@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Looking App — 自适应图标前景层
+  用法：放入 res/drawable/ic_launcher_foreground.xml
+  配合 ic_launcher_background.xml 使用
+  支持 Android 8.0+ 自适应图标
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <defs>
+        <!-- 放大镜镜面渐变 -->
+        <radialGradient
+            android:centerX="0.38"
+            android:centerY="0.32"
+            android:gradientRadius="0.75"
+            android:type="radial"
+            android:startColor="#EEF0FF"
+            android:endColor="#B8B0FF"/>
+    </defs>
+
+    <!--
+      ┌─────────────────────────────┐
+      │  核心图形：放大镜 + 瞳孔眼睛  │
+      │  整体居中偏上，留出安全区     │
+      └─────────────────────────────┘
+      坐标系：108×108，安全区 72×72 (18~90)
+      放大镜圆心：(52, 48)，外径 26dp
+    -->
+
+    <!-- ① 镜面（填充） -->
+    <path
+        android:pathData="M52,22 A26,26 0,1,1 51.99,22 Z"
+        android:fillColor="#C4BEFF"
+        android:fillAlpha="0.25"/>
+
+    <!-- ② 外圆环 -->
+    <path
+        android:pathData="M52,22 A26,26 0,1,1 51.99,22 Z"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="5"
+        android:strokeAlpha="0.92"
+        android:fillColor="#00000000"/>
+
+    <!-- ③ 镜面填充（实色） -->
+    <path
+        android:pathData="M32.0,48.0 A20.0,20.0 0 1,0 72.0,48.0 A20.0,20.0 0 1,0 32.0,48.0 Z"
+        android:fillColor="#D4CEFF"
+        android:fillAlpha="0.88"/>
+
+    <!-- ④ 镜面高光（左上弧） -->
+    <path
+        android:pathData="M 43,37 Q 48,33 55,36"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="3.5"
+        android:strokeAlpha="0.55"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"/>
+
+    <!-- ⑤ 虹膜圈 -->
+    <path
+        android:pathData="M42.0,48.0 A10.0,10.0 0 1,0 62.0,48.0 A10.0,10.0 0 1,0 42.0,48.0 Z"
+        android:strokeColor="#6C63FF"
+        android:strokeWidth="2"
+        android:strokeAlpha="0.7"
+        android:fillColor="#00000000"/>
+
+    <!-- ⑥ 瞳孔 -->
+    <path
+        android:pathData="M47.0,48.0 A5.0,5.0 0 1,0 57.0,48.0 A5.0,5.0 0 1,0 47.0,48.0 Z"
+        android:fillColor="#3A2FC4"
+        android:fillAlpha="0.92"/>
+
+    <!-- ⑦ 瞳孔高光（主） -->
+    <path
+        android:pathData="M52.2,45.8 A2.0,2.0 0 1,0 56.2,45.8 A2.0,2.0 0 1,0 52.2,45.8 Z"
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.95"/>
+
+    <!-- ⑧ 瞳孔高光（副） -->
+    <path
+        android:pathData="M49.0,50.5 A1.0,1.0 0 1,0 51.0,50.5 A1.0,1.0 0 1,0 49.0,50.5 Z"
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.5"/>
+
+    <!-- ⑨ 把手 -->
+    <path
+        android:pathData="M 69,65 L 82,78"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="7"
+        android:strokeAlpha="0.9"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"/>
+
+    <!-- ⑩ 把手高光描边 -->
+    <path
+        android:pathData="M 69,65 L 82,78"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2.5"
+        android:strokeAlpha="0.4"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"/>
+
+    <!-- ⑪ 装饰小光点 （右上） -->
+    <path
+        android:pathData="M74.2,24.0 A1.8,1.8 0 1,0 77.8,24.0 A1.8,1.8 0 1,0 74.2,24.0 Z"
+        android:fillColor="#FFFFFF" android:fillAlpha="0.6"/>
+    <path
+        android:pathData="M77.9,29.0 A1.1,1.1 0 1,0 80.1,29.0 A1.1,1.1 0 1,0 77.9,29.0 Z"
+        android:fillColor="#FFFFFF" android:fillAlpha="0.35"/>
+
+    <!-- ⑫ 装饰小光点（左上） -->
+    <path
+        android:pathData="M22.5,28.0 A1.5,1.5 0 1,0 25.5,28.0 A1.5,1.5 0 1,0 22.5,28.0 Z"
+        android:fillColor="#FFFFFF" android:fillAlpha="0.5"/>
+    <path
+        android:pathData="M26.1,23.0 A0.9,0.9 0 1,0 27.9,23.0 A0.9,0.9 0 1,0 26.1,23.0 Z"
+        android:fillColor="#FFFFFF" android:fillAlpha="0.3"/>
+
+    <!-- ⑬ 底部装饰弧线（地平线/探索感） -->
+    <path
+        android:pathData="M 34,80 Q 52,87 70,80"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="1.5"
+        android:strokeAlpha="0.28"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"/>
+
+</vector>
